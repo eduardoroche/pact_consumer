@@ -6,6 +6,10 @@ pipeline {
   environment {
       BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
   }
+  
+  tools {
+	maven 'M3'
+  }
 
   stages {
     stage('Build') {
