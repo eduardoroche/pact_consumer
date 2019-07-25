@@ -7,7 +7,25 @@
     },
     "interactions": [
         {
-            "description": "A request to /users/1",
+            "description": "A request for a non-existing user",
+            "request": {
+                "method": "GET",
+                "path": "/users/1"
+            },
+            "response": {
+                "status": 404
+            },
+            "providerStates": [
+                {
+                    "name": "default",
+                    "params": {
+                        "userExists": false
+                    }
+                }
+            ]
+        },
+        {
+            "description": "A request for an existing user",
             "request": {
                 "method": "GET",
                 "path": "/users/1"
@@ -28,12 +46,21 @@
                             "name": "a friend"
                         }
                     ],
+                    "id": "1",
                     "lastLogin": "2018-10-16T12:34:12.000Z",
                     "name": "user name for CDC",
                     "role": "ADMIN"
                 },
                 "matchingRules": {
                     "body": {
+                        "$.id": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
                         "$.name": {
                             "matchers": [
                                 {
@@ -101,22 +128,10 @@
             },
             "providerStates": [
                 {
-                    "name": "User 1 exists"
-                }
-            ]
-        },
-        {
-            "description": "A request to /users/2",
-            "request": {
-                "method": "GET",
-                "path": "/users/2"
-            },
-            "response": {
-                "status": 404
-            },
-            "providerStates": [
-                {
-                    "name": "User 2 does not exist"
+                    "name": "default",
+                    "params": {
+                        "userExists": true
+                    }
                 }
             ]
         }
