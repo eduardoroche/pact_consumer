@@ -107,6 +107,6 @@ public class UserServiceContractTest {
         expandException.expect(HttpClientErrorException.class);
         expandException.expectMessage("404 Not Found");
 
-        userServiceClient.getUser("2");
+        userServiceClient.getUser("3");
     }
 }
