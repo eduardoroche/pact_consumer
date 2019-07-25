@@ -78,7 +78,7 @@ public class UserServiceGenericStateWithParameterContractTest {
 
         return builder.given("default", Collections.singletonMap("userExists", false))
             .uponReceiving("A request for a non-existing user")
-            .path("/users/1")
+            .path("/users/3")
             .method("GET")
             .willRespondWith()
             .status(404)
