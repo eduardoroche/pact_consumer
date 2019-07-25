@@ -78,7 +78,7 @@ public class UserServiceGenericStateWithParameterContractTest {
 
         return builder.given("default", Collections.singletonMap("userExists", false))
             .uponReceiving("A request for a non-existing user")
-            .path("/users/3")
+            .path("/users/1")
             .method("GET")
             .willRespondWith()
             .status(404)
@@ -105,6 +105,6 @@ public class UserServiceGenericStateWithParameterContractTest {
         expandException.expect(HttpClientErrorException.class);
         expandException.expectMessage("404 Not Found");
 
-        userServiceClient.getUser("3");
+        userServiceClient.getUser("1");
     }
 }
