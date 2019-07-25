@@ -11,14 +11,14 @@ pipeline {
     stage('Build') {
       steps {
         dir('messaging-app') {
-           sh '/home/jenkins/maven/bin/mvn clean verify'
+           sh 'mvn clean verify'
         }
       }
     }
     stage('Publish Pacts') {
       steps {
         dir('messaging-app') {
-           sh '/home/jenkins/maven/bin/mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+           sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
         }
       }
     }
