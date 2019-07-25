@@ -15,14 +15,14 @@ pipeline {
     stage('Build') {
       steps {
         dir('messaging-app') {
-           sh 'mvnw clean verify'
+           sh './mvnw clean verify'
         }
       }
     }
     stage('Publish Pacts') {
       steps {
         dir('messaging-app') {
-           sh 'mvnw pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+           sh './mvnw pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
         }
       }
     }
