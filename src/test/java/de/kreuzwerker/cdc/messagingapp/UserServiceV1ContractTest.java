@@ -82,7 +82,7 @@ public class UserServiceV1ContractTest {
     @Pact(consumer = "messaging-app3")
     public RequestResponsePact pactUserExists3(PactDslWithProvider builder) {
         return builder.given(
-                "User 1 exists")
+                "Old User 1 exists")
                 .uponReceiving("A request to /users/old/1")
                 .path("/users/old/1")
                 .method("GET")
