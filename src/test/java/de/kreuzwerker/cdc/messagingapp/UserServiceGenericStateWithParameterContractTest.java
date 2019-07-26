@@ -115,7 +115,7 @@ public class UserServiceGenericStateWithParameterContractTest {
     @Test
     public void userDoesNotExist() {
         expandException.expect(HttpClientErrorException.class);
-        expandException.expectMessage("404 Not Found");
+        expandException.expectMessage("403 Forbidden");
         userServiceClient.getUser("2");
     }
 
