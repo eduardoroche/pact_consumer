@@ -12,6 +12,7 @@ import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +20,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE,
-    properties = "user-service.base-url:http://localhost:${RANDOM_PORT}",
-    classes = UserServiceClient.class)
+        properties = "user-service.base-url:http://localhost:${RANDOM_PORT}",
+        classes = UserServiceClient.class)
 public class UserServiceContractTestV1 {
 
     @ClassRule
@@ -28,7 +29,7 @@ public class UserServiceContractTestV1 {
 
     @Rule
     public PactProviderRuleMk2 provider = new PactProviderRuleMk2("user-service", null,
-        randomPort.getPort(), this);
+            randomPort.getPort(), this);
 
     @Autowired
     private UserServiceClient userServiceClient;
@@ -38,15 +39,15 @@ public class UserServiceContractTestV1 {
     public RequestResponsePact pactUserExists(PactDslWithProvider builder) {
         System.out.println("kakaka");
         return builder.given(
-            "User 1 exists")
-            .uponReceiving("A request to /users/1")
-            .path("/users/1")
-            .method("GET")
-            .willRespondWith()
-            .status(200)
-            .body(LambdaDsl.newJsonBody((o) ->
-                o.stringType("name", "user name for CDC")
-            ).build()).toPact();
+                "User 1 exists")
+                .uponReceiving("A request to /users/1")
+                .path("/users/1")
+                .method("GET")
+                .willRespondWith()
+                .status(200)
+                .body(LambdaDsl.newJsonBody((o) ->
+                        o.stringType("name", "user name for CDC")
+                ).build()).toPact();
     }
 
     @PactVerification(fragment = "pactUserExists")
