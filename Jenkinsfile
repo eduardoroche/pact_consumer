@@ -19,7 +19,6 @@ pipeline {
     }
     stage('Publish Pacts') {
       steps {
-		  print '${BRANCH_NAME}'
           sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
       }
     }
