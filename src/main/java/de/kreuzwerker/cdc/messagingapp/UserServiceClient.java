@@ -28,7 +28,7 @@ public class UserServiceClient {
     }
 
     public User getUserOldVersion(String id) {
-        final User user = restTemplate.getForObject("/users/old/" + id, User.class);
+        final User user = restTemplate.getForObject("/users/" + id, User.class);
         Assert.hasText(user.getName(), "Name is blank.");
         return user;
     }
