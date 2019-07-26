@@ -21,4 +21,10 @@ public class UserServiceClient {
         return user;
     }
 
+    public User getUserByName(String name) {
+        final User user = restTemplate.getForObject("/users/name/" + name, User.class);
+        Assert.hasText(user.getName(), "Name is blank.");
+        return user;
+    }
+
 }

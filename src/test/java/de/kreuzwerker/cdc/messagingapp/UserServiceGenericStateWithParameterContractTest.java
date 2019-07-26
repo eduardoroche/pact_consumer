@@ -85,6 +85,18 @@ public class UserServiceGenericStateWithParameterContractTest {
             .toPact();
     }
 
+    @Pact(consumer = "messaging-app")
+    public RequestResponsePact pactUserByNameDoesNotExist(PactDslWithProvider builder) {
+
+        return builder.given("default", Collections.singletonMap("userExists", false))
+                .uponReceiving("A request for a non-existing user")
+                .path("/users/2")
+                .method("GET")
+                .willRespondWith()
+                .status(404)
+                .toPact();
+    }
+
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
@@ -102,6 +114,14 @@ public class UserServiceGenericStateWithParameterContractTest {
     @PactVerification(fragment = "pactUserDoesNotExist")
     @Test
     public void userDoesNotExist() {
+        expandException.expect(HttpClientErrorException.class);
+        expandException.expectMessage("404 Not Found");
+        userServiceClient.getUser("2");
+    }
+
+    @PactVerification(fragment = "pactUserByNameDoesNotExist")
+    @Test
+    public void userByNameDoesNotExist() {
         expandException.expect(HttpClientErrorException.class);
         expandException.expectMessage("404 Not Found");
         userServiceClient.getUser("2");
