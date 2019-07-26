@@ -81,7 +81,7 @@ public class UserServiceGenericStateWithParameterContractTest {
             .path("/users/2")
             .method("GET")
             .willRespondWith()
-            .status(404)
+            .status(403)
             .toPact();
     }
 
