@@ -119,6 +119,7 @@ public class UserServiceGenericStateWithParameterContractTest {
         userServiceClient.getUser("2");
     }
 
+
     @PactVerification(fragment = "pactUserByNameDoesNotExist")
     @Test
     public void userByNameDoesNotExist() {
