@@ -84,7 +84,7 @@ public class UserServiceV1ContractTest {
         return builder.given(
                 "User 1 exists")
                 .uponReceiving("A request to /users/old/1")
-                .path("/users/1")
+                .path("/users/old/1")
                 .method("GET")
                 .willRespondWith()
                 .status(200)
