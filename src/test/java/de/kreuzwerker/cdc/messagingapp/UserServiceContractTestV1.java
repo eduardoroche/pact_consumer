@@ -37,6 +37,7 @@ public class UserServiceContractTestV1 {
 
     @Pact(consumer = "messaging-app")
     public RequestResponsePact pactUserExists(PactDslWithProvider builder) {
+        System.out.println("kakaka");
         return builder.given(
             "User 1 exists")
             .uponReceiving("A request to /users/1")
@@ -52,6 +53,7 @@ public class UserServiceContractTestV1 {
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
+        System.out.println("abc");
         User user = userServiceClient.getUser("1");
 
         assertThat(user.getName()).isEqualTo("user name for CDC");
