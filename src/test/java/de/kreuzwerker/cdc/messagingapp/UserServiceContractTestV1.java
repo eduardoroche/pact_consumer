@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE,
     properties = "user-service.base-url:http://localhost:${RANDOM_PORT}",
     classes = UserServiceClient.class)
-@Ignore
+//@Ignore
 public class UserServiceContractTestV1 {
 
     @ClassRule
