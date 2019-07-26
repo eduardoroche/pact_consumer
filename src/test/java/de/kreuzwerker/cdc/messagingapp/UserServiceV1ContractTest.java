@@ -83,7 +83,7 @@ public class UserServiceV1ContractTest {
     public RequestResponsePact pactUserExists3(PactDslWithProvider builder) {
         return builder.given(
                 "User 1 exists")
-                .uponReceiving("A request to /users/1")
+                .uponReceiving("A request to /users/old/1")
                 .path("/users/old/1")
                 .method("GET")
                 .willRespondWith()
@@ -93,7 +93,7 @@ public class UserServiceV1ContractTest {
                 ).build()).toPact();
     }
 
-    @PactVerification(fragment = "pactUserExist3s")
+    @PactVerification(fragment = "pactUserExists3")
     @Test
     public void userExists3() {
         User user = userServiceClient.getUserOldVersion("1");
