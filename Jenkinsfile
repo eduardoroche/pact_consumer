@@ -19,7 +19,15 @@ pipeline {
     }
     stage('Publish Pacts') {
       steps {
-          sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+          dir('messaging-app') {
+              sh '../mvnw pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+          }
+          dir('messaging-app2') {
+              sh '../mvnw pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+          }
+          dir('messaging-app3') {
+              sh '../mvnw pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=${BRANCH_NAME}'
+          }
       }
     }
     stage('Check Pact Verifications') {
