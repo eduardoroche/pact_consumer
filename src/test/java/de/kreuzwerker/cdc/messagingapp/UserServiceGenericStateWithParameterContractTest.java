@@ -29,7 +29,6 @@ import org.springframework.web.client.HttpClientErrorException;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE,
     properties = "user-service.base-url:http://localhost:${RANDOM_PORT}",
     classes = UserServiceClient.class)
-@Ignore
 public class UserServiceGenericStateWithParameterContractTest {
 
     private static final String NAME = "user name for CDC";
@@ -51,82 +50,25 @@ public class UserServiceGenericStateWithParameterContractTest {
 
     @Pact(consumer = "messaging-app")
     public RequestResponsePact pactUserExists(PactDslWithProvider builder) {
-
-        // See https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-consumer-junit#dsl-matching-methods
-        DslPart body = LambdaDsl.newJsonBody((o) -> o
-            .stringType("id", "1")
-            .stringType("name", NAME)
-            .timestamp("lastLogin", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-                Date.from(LAST_LOGIN.atZone(ZoneId.systemDefault()).toInstant()))
-            .stringMatcher("role", "ADMIN|USER", "ADMIN")
-            .minArrayLike("friends", 0, 2, friend -> friend
-                .stringType("id", "2")
-                .stringType("name", "a friend")
-            )).build();
-
-        return builder.given("default", Collections.singletonMap("userExists", true))
-            .uponReceiving("A request for an existing user")
-            .path("/users/1")
-            .method("GET")
-            .willRespondWith()
-            .status(200)
-            .body(body)
-            .toPact();
-
-    }
-
-    @Pact(consumer = "messaging-app")
-    public RequestResponsePact pactUserDoesNotExist(PactDslWithProvider builder) {
-
-        return builder.given("default", Collections.singletonMap("userExists", false))
-            .uponReceiving("A request for a non-existing user")
-            .path("/users/2")
-            .method("GET")
-            .willRespondWith()
-            .status(403)
-            .toPact();
-    }
-
-    @Pact(consumer = "messaging-app")
-    public RequestResponsePact pactUserByNameDoesNotExist(PactDslWithProvider builder) {
-
-        return builder.given("default", Collections.singletonMap("userExists", false))
-                .uponReceiving("A request for a non-existing user")
-                .path("/users/2")
+        System.out.println("kakaka");
+        return builder.given(
+                "User 1 exists")
+                .uponReceiving("A request to /users/1")
+                .path("/users/1")
                 .method("GET")
                 .willRespondWith()
-                .status(404)
-                .toPact();
+                .status(200)
+                .body(LambdaDsl.newJsonBody((o) ->
+                        o.stringType("name", "user name for CDC")
+                ).build()).toPact();
     }
 
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
-        final User user = userServiceClient.getUser("1");
+        System.out.println("abc");
+        User user = userServiceClient.getUser("1");
 
-        assertThat(user.getName()).isEqualTo(NAME);
-        assertThat(user.getLastLogin()).isEqualTo(LAST_LOGIN);
-        assertThat(user.getRole()).isEqualTo("ADMIN");
-        assertThat(user.getFriends()).hasSize(2)
-            // currently not possible to define multiple values, s. https://github.com/DiUS/pact-jvm/issues/379
-            .extracting(Friend::getId, Friend::getName)
-            .containsExactly(Tuple.tuple("2", "a friend"), Tuple.tuple("2", "a friend"));
-    }
-
-    @PactVerification(fragment = "pactUserDoesNotExist")
-    @Test
-    public void userDoesNotExist() {
-        expandException.expect(HttpClientErrorException.class);
-        expandException.expectMessage("403 Forbidden");
-        userServiceClient.getUser("2");
-    }
-
-
-    @PactVerification(fragment = "pactUserByNameDoesNotExist")
-    @Test
-    public void userByNameDoesNotExist() {
-        expandException.expect(HttpClientErrorException.class);
-        expandException.expectMessage("404 Not Found");
-        userServiceClient.getUser("2");
+        assertThat(user.getName()).isEqualTo("user name for CDC");
     }
 }

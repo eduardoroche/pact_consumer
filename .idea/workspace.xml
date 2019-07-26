@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fb47570-aec4-4b8c-ba1a-c2e99da24589" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="48" selection-end-column="48" />
+            <state relative-caret-position="330">
+              <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+            <state relative-caret-position="551">
+              <caret line="59" column="5" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="59" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -136,10 +136,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/kreuzwerker/cdc/messagingapp/UserServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" />
       </list>
     </option>
   </component>
@@ -480,20 +480,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="48" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="551">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="59" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        <state relative-caret-position="330">
+          <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
