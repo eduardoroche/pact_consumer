@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fb47570-aec4-4b8c-ba1a-c2e99da24589" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,17 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="585">
               <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="41">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="35" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,20 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/pacts/messaging-app-user-service.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="92">
+              <caret line="34" column="95" selection-start-line="34" selection-start-column="95" selection-end-line="34" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -85,7 +77,6 @@
       <find>A request for an existing user</find>
       <find>non-exi</find>
       <find>A request for a non-existing</find>
-      <find>pactUserExists</find>
       <find>A request for a non-existing user</find>
       <find>mock</find>
       <find>provider</find>
@@ -93,6 +84,8 @@
       <find>User 1</find>
       <find>User 1 exists</find>
       <find>pactUserDoesNotExist</find>
+      <find>pactUserExists</find>
+      <find>UserServiceGenericStateWithParameterContractTest</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,16 +97,16 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/kreuzwerker/cdc/messagingapp/UserServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="146" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="417" />
+    <option name="y" value="76" />
+    <option name="width" value="1549" />
+    <option name="height" value="837" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -176,23 +169,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="messagingapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-test-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="pacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceContractTest">
+  <component name="RunManager" selected="JUnit.UserServiceContractTestV1">
     <configuration name="UserServiceContractTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="messaging-app" />
       <extension name="coverage">
@@ -276,6 +252,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.kreuzwerker.cdc.messagingapp" />
       <option name="MAIN_CLASS_NAME" value="de.kreuzwerker.cdc.messagingapp.UserServiceContractTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceContractTestV1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="messaging-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.kreuzwerker.cdc.messagingapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.kreuzwerker.cdc.messagingapp" />
+      <option name="MAIN_CLASS_NAME" value="de.kreuzwerker.cdc.messagingapp.UserServiceContractTestV1" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -299,6 +290,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceContractTestV1" />
         <item itemvalue="JUnit.UserServiceContractTest" />
         <item itemvalue="JUnit.UserServiceContractTest.pactUserExists" />
       </list>
@@ -324,9 +316,12 @@
     <history-entry file="UserServiceContractTest - 2019.07.25 at 08h 03m 50s.xml">
       <configuration name="UserServiceContractTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserServiceContractTestV1 - 2019.07.26 at 11h 13m 59s.xml">
+      <configuration name="UserServiceContractTestV1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="146" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -389,20 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/RandomPortRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/MessagingApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/au/com/dius/pact-jvm-consumer-junit_2.12/3.5.24/pact-jvm-consumer-junit_2.12-3.5.24.jar!/au/com/dius/pact/consumer/PactProviderRuleMk2.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -410,24 +391,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/pacts/messaging-app-user-service.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
@@ -445,20 +412,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/MessagingApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/RandomPortRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/pacts/messaging-app-user-service.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1746">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceGenericStateWithParameterContractTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="41">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="35" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceContractTestV1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="34" column="95" selection-start-line="34" selection-start-column="95" selection-end-line="34" selection-end-column="95" />
         </state>
       </provider>
     </entry>
