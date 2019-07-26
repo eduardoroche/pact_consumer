@@ -50,9 +50,33 @@ public class UserServiceV1ContractTest {
                 ).build()).toPact();
     }
 
+    @Pact(consumer = "messaging-app2")
+    public RequestResponsePact pactUserExists2(PactDslWithProvider builder) {
+        System.out.println("kakaka 2");
+        return builder.given(
+                "User 1 exists")
+                .uponReceiving("A request to /users/1")
+                .path("/users/1")
+                .method("GET")
+                .willRespondWith()
+                .status(200)
+                .body(LambdaDsl.newJsonBody((o) ->
+                        o.stringType("name", "user name for CDC")
+                ).build()).toPact();
+    }
+
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
+        System.out.println("abc 3");
+        User user = userServiceClient.getUser("1");
+
+        assertThat(user.getName()).isEqualTo("user name for CDC");
+    }
+
+    @PactVerification(fragment = "pactUserExists2")
+    @Test
+    public void userExists2() {
         System.out.println("abc 3");
         User user = userServiceClient.getUser("1");
 
