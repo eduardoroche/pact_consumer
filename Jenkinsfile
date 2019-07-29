@@ -18,7 +18,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-	   sh "mvn clean verify -Dpactbroker.tags=${params.pactConsumerTags}"
+	   sh "mvn clean verify"
       }
     }
     stage('Publish Pacts') {
