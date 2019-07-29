@@ -88,9 +88,7 @@ public class UserServiceV1ContractTest {
                 .method("GET")
                 .willRespondWith()
                 .status(404)
-                .body(LambdaDsl.newJsonBody((o) ->
-                        o.stringType("name", "user name for CDC")
-                ).build()).toPact();
+                .toPact();
     }
 
     @PactVerification(fragment = "pactUserExists3")
