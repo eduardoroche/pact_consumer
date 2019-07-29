@@ -18,6 +18,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.client.HttpClientErrorException;
 import unfiltered.response.NotFound;
 
 @RunWith(SpringRunner.class)
@@ -100,7 +101,7 @@ public class UserServiceV1ContractTest {
     @Test
     public void userExists3() {
        // User user = userServiceClient.getUserOldVersion("1");
-        expandException.expect(NotFoundException.class);
+        expandException.expect(HttpClientErrorException.class);
         expandException.expectMessage("404 Not Found");
         User user = userServiceClient.getUserOldVersion("1");
     //    assertThat(user.getName()).isEqualTo("user name for CDC");
