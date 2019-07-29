@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Publish Pacts') {
       steps {
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=test-label4'
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=test-label5'
       }
     }
     stage('Check Pact Verifications') {
