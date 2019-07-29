@@ -7,6 +7,7 @@ import au.com.dius.pact.consumer.PactProviderRuleMk2;
 import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
 import au.com.dius.pact.model.RequestResponsePact;
+import com.amazonaws.services.kms.model.NotFoundException;
 import io.pactfoundation.consumer.dsl.LambdaDsl;
 import org.junit.ClassRule;
 import org.junit.Ignore;
@@ -17,6 +18,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import unfiltered.response.NotFound;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE,
@@ -33,6 +35,9 @@ public class UserServiceV1ContractTest {
 
     @Autowired
     private UserServiceClient userServiceClient;
+
+    @Rule
+    public ExpectedException expandException = ExpectedException.none();
 
 
     @Pact(consumer = "messaging-app")
@@ -94,8 +99,10 @@ public class UserServiceV1ContractTest {
     @PactVerification(fragment = "pactUserExists3")
     @Test
     public void userExists3() {
+       // User user = userServiceClient.getUserOldVersion("1");
+        expandException.expect(NotFoundException.class);
+        expandException.expectMessage("404 Not Found");
         User user = userServiceClient.getUserOldVersion("1");
-
-        assertThat(user.getName()).isEqualTo("user name for CDC");
+    //    assertThat(user.getName()).isEqualTo("user name for CDC");
     }
 }
