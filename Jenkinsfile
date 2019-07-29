@@ -41,6 +41,13 @@ pipeline {
         echo 'Deploying to prod now...'
       }
     }
+    stage('Tag Pact') {
+      steps {
+        dir('pact/bin') {
+          sh "./pact-broker create-version-tag -a messaging-app -b http://pact_broker -e ${GIT_COMMIT} -t prod"
+        }
+      }
+    }
   }
 
 }
