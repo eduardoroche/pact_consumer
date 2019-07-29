@@ -6,7 +6,11 @@ pipeline {
   environment {
       BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
   }
-  
+
+  parameters {
+    string(name: 'pactConsumerTags', defaultValue: 'master')
+  }
+
   tools {
 	maven 'maven'
   }
@@ -14,7 +18,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-	   sh 'mvn clean verify'
+	   sh 'mvn clean verify -Dpactbroker.tags=${params.pactConsumerTags}"'
       }
     }
     stage('Publish Pacts') {
