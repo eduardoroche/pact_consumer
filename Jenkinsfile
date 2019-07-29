@@ -7,10 +7,6 @@ pipeline {
       BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
   }
 
-  parameters {
-    string(name: 'pactConsumerTags', defaultValue: 'master')
-  }
-
   tools {
 	maven 'maven'
   }
