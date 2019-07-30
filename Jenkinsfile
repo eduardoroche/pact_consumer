@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Publish Pacts') {
       steps {
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-label12'
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT}'
       }
     }
     stage('Check Pact Verifications') {
@@ -41,13 +41,15 @@ pipeline {
         echo 'Deploying to prod now...'
       }
     }
-    /**stage('Tag Pact') {
+    stage('Tag Pact') {
       steps {
         dir('pact/bin') {
-          sh "./pact-broker create-version-tag -a messaging-app -b http://pact_broker -e ${GIT_COMMIT} -t prod"
+          sh "./pact-broker create-version-tag -a messaging-app -b http://pact_broker -e ${GIT_COMMIT} -t prod1"
+          sh "./pact-broker create-version-tag -a messaging-app2 -b http://pact_broker -e ${GIT_COMMIT} -t prod1"
+          sh "./pact-broker create-version-tag -a messaging-app3 -b http://pact_broker -e ${GIT_COMMIT} -t prod1"
         }
       }
-    }**/
+    }
   }
 
 }
