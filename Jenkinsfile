@@ -17,7 +17,11 @@ pipeline {
 	   sh "mvn clean verify"
       }
     }
-
+    stage('Publish Pacts') {
+      steps {
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-label12'
+      }
+    }
     stage('Check Pact Verifications') {
       steps {
         sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.61.1/pact-1.61.1-linux-x86_64.tar.gz'
@@ -29,11 +33,6 @@ pipeline {
         }
       }
     }
-    stage('Publish Pacts') {
-      steps {
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=prod'
-      }
-    }
     stage('Deploy') {
       when {
         branch 'master'
@@ -42,7 +41,7 @@ pipeline {
         echo 'Deploying to prod now...'
       }
     }
-    /*stage('Tag Pact') {
+    stage('Tag Pact') {
       steps {
         dir('pact/bin') {
           sh "./pact-broker create-version-tag -a messaging-app -b http://pact_broker -e ${GIT_COMMIT} -t prod"
@@ -50,7 +49,7 @@ pipeline {
           sh "./pact-broker create-version-tag -a messaging-app3 -b http://pact_broker -e ${GIT_COMMIT} -t prod"
         }
       }
-    }*/
+    }
   }
 
 }
