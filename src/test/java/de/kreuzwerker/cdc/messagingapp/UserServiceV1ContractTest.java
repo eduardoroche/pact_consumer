@@ -108,7 +108,7 @@ public class UserServiceV1ContractTest {
     public void userExists3() {
        expandException.expect(HttpClientErrorException.class);
        expandException.expectMessage("404 Not Found");
-        //User user = userServiceClient.getUserOldVersion("1");
+       User user = userServiceClient.getUserOldVersion("1");
         //assertThat(user.getName()).isEqualTo("user name for CDC");
     }
 }
