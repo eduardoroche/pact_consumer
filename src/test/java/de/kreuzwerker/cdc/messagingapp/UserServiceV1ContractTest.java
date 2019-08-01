@@ -95,12 +95,12 @@ public class UserServiceV1ContractTest {
                 .path("/users/1")
                 .method("GET")
                 .willRespondWith()
-                .status(404)
-                .toPact();
+               .status(404)
+               .toPact();
           //      .status(200)
             //    .body(LambdaDsl.newJsonBody((o) ->
               //          o.stringType("name", "user name for CDC")
-               // ).build()).toPact();
+                //).build()).toPact();
     }
 
     @PactVerification(fragment = "pactUserExists3")
