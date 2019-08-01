@@ -20,7 +20,7 @@ pipeline {
     stage('Publish Pacts') {
       steps {
         //-- set prod if want to deploy prod tag
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-label'
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-label2'
       }
     }
     stage('Check Pact Verifications') {
