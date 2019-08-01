@@ -93,19 +93,21 @@ public class UserServiceV1ContractTest {
                 .path("/users/1")
                 .method("GET")
                 .willRespondWith()
-                .status(200)
+                .status(404)
+                .toPact();
+                /*.status(200)
                 .body(LambdaDsl.newJsonBody((o) ->
                         o.stringType("name", "user name for CDC")
-                ).build()).toPact();
+                ).build()).toPact();*/
     }
 
     @PactVerification(fragment = "pactUserExists3")
     @Test
     public void userExists3() {
+        expandException.expect(HttpClientErrorException.class);
+        expandException.expectMessage("404 Not Found");
         User user = userServiceClient.getUserOldVersion("1");
-       // expandException.expect(HttpClientErrorException.class);
-       // expandException.expectMessage("404 Not Found");
        // User user = userServiceClient.getUserOldVersion("1");
-        assertThat(user.getName()).isEqualTo("user name for CDC");
+       // assertThat(user.getName()).isEqualTo("user name for CDC");
     }
 }

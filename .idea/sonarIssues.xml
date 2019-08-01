@@ -13,7 +13,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../user-service/Jenkinsfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
           <value>
             <set />
           </value>
