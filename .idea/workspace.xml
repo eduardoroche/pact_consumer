@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java" line="102" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fb47570-aec4-4b8c-ba1a-c2e99da24589" name="Default Changelist" comment="" />
+    <list default="true" id="3fb47570-aec4-4b8c-ba1a-c2e99da24589" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="269">
+              <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -57,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -155,8 +157,8 @@
         <option value="$PROJECT_DIR$/jenkins/cd/Jenkinsfile" />
         <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/MessagingApplicationTests.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java" />
       </list>
     </option>
   </component>
@@ -421,7 +423,7 @@
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3050162" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3050162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -436,8 +438,8 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.44509518" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49919093" weight="0.44479004" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5008091" side_tool="true" weight="0.44479004" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -450,7 +452,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3050162" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3050162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -465,8 +467,8 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.44509518" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49919093" visible="true" weight="0.44479004" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5008091" side_tool="true" visible="true" weight="0.44479004" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -618,17 +620,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/kreuzwerker/cdc/messagingapp/UserServiceV1ContractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
         </state>
       </provider>
     </entry>
