@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/Jenkinsfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/Jenkinsfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/src/test/java/com/example/BeerControllerForBarTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/src/test/java/com/example/BeerControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/src/test/java/com/example/BeerControllerWithConsumerNameTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/src/test/java/com/example/BeerVerificationListenerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/consumer_with_stubs_per_consumer/src/test/java/com/example/FooControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_pact/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_external_contracts/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/src/test/java/com/example/BeerMessagingBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/src/test/java/com/example/BeerRestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/target/test-classes/contracts/bar-consumer/messaging/shouldSendAcceptedVerification.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/target/test-classes/contracts/bar-consumer/messaging/shouldSendRejectedVerification.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-cloud-contract-samples/producer_with_stubs_per_consumer/target/test-classes/contracts/bar-consumer/rest/shouldGrantABeerIfOldEnough.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
