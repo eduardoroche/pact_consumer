@@ -49,12 +49,12 @@ public class UserServiceV1ContractTest {
                 .path("/users/1")
                 .method("GET")
                 .willRespondWith()
-                //.status(200)
-                .status(404)
-                .toPact();
-               // .body(LambdaDsl.newJsonBody((o) ->
-               //         o.stringType("name", "user name for CDC")
-               // ).build()).toPact();
+                .status(200)
+                // .status(404)
+                // .toPact();
+                .body(LambdaDsl.newJsonBody((o) ->
+                        o.stringType("name", "user name for CDC")
+                ).build()).toPact();
     }
 
     @PactVerification(fragment = "pactUserExists")
