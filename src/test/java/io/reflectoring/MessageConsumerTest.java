@@ -28,7 +28,7 @@ public class MessageConsumerTest {
     @Autowired
     private MessageConsumer messageConsumer;
 
-    @Pact(provider = "userservice", consumer = "userclient")
+    @Pact(provider = "user-service", consumer = "userclient")
     public MessagePact userCreatedMessagePact(MessagePactBuilder builder) {
         PactDslJsonBody body = new PactDslJsonBody();
         body.stringType("messageUuid");
