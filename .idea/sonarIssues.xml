@@ -88,6 +88,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/io/reflectoring/MessageProducer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/io/reflectoring/MessageProviderConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../user-service/src/main/java/io/reflectoring/SendMessageJob.java">
           <value>
             <set />
