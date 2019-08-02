@@ -1,6 +1,7 @@
 package de.kreuzwerker.cdc.messagingapp;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Import;
         "de.kreuzwerker.cdc"
 })
 @Slf4j
+@EnableRabbit
 public class MessagingApplication {
 
     public static void main(String[] args) {
