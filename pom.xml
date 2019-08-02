@@ -40,6 +40,11 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>au.com.dius</groupId>
       <artifactId>pact-jvm-consumer-java8_2.12</artifactId>
       <version>${pact.version}</version>
