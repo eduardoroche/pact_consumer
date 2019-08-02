@@ -38,6 +38,14 @@ public class MessageConsumerConfiguration {
     }
 
     @Bean
+    public ConnectionFactory connectionFactory() {
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
+        return connectionFactory;
+    }
+
+    @Bean
     public SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
                                                     MessageListenerAdapter listenerAdapter) {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
