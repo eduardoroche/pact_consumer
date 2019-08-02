@@ -38,8 +38,8 @@ public class MessageConsumerTest {
                 .closeObject();
 
         // @formatter:off
-        return builder
-                .expectsToReceive("a user created message")
+        return builder.given("some state")
+                //.expectsToReceive("a user created message")
                 .withContent(body)
                 .toPact();
         // @formatter:on
