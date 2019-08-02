@@ -23,6 +23,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/de/kreuzwerker/cdc/userservice/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/de/kreuzwerker/cdc/userservice/UserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/de/kreuzwerker/cdc/userservice/UserServiceApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/test/java/de/kreuzwerker/cdc/userservice/GenericStateWithParameterContractTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../user-service/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
           <value>
             <set />
