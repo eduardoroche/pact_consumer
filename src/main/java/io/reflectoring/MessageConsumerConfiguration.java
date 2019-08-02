@@ -5,6 +5,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
@@ -37,11 +38,11 @@ public class MessageConsumerConfiguration {
     }
 
     @Bean
-    public SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
+    public SimpleMessageListenerContainer container(
                                                     MessageListenerAdapter listenerAdapter) {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
         container.setConsumerStartTimeout(1000); // we don't want to wait in this example project
-        container.setConnectionFactory(connectionFactory);
+        container.setConnectionFactory(null);
         container.setQueueNames(QUEUE_NAME);
         container.setMessageListener(listenerAdapter);
         return container;
@@ -53,8 +54,8 @@ public class MessageConsumerConfiguration {
     }
 
     @Bean
-    public MessageConsumer eventReceiver(ObjectMapper objectMapper) {
-        return new MessageConsumer(objectMapper);
+    public MessageConsumer eventReceiver() {
+        return new MessageConsumer();
     }
 
 }

@@ -16,13 +16,8 @@ public class MessageConsumer {
 
     private Logger logger = LoggerFactory.getLogger(MessageConsumer.class);
 
-    private ObjectMapper objectMapper;
-
-    public MessageConsumer(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
-    }
-
     public void consumeStringMessage(String messageString) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
         logger.info("Consuming message '{}'", messageString);
         UserCreatedMessage message = objectMapper.readValue(messageString, UserCreatedMessage.class);
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
