@@ -38,11 +38,11 @@ public class MessageConsumerConfiguration {
     }
 
     @Bean
-    public SimpleMessageListenerContainer container(
+    public SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
                                                     MessageListenerAdapter listenerAdapter) {
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
         container.setConsumerStartTimeout(1000); // we don't want to wait in this example project
-        container.setConnectionFactory(null);
+        container.setConnectionFactory(connectionFactory);
         container.setQueueNames(QUEUE_NAME);
         container.setMessageListener(listenerAdapter);
         return container;
