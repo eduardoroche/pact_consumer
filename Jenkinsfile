@@ -20,7 +20,7 @@ pipeline {
     stage('Publish Pacts') {
       steps {
         //-- set prod if want to deploy prod tag
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-1'
+        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-2'
       }
     }
     stage('Check Pact Verifications') {
@@ -31,6 +31,7 @@ pipeline {
           sh "./pact-broker can-i-deploy --retry-while-unknown=12 --retry-interval=10 -a messaging-app -b http://pact_broker -e ${GIT_COMMIT}"
           sh "./pact-broker can-i-deploy --retry-while-unknown=12 --retry-interval=10 -a messaging-app2 -b http://pact_broker -e ${GIT_COMMIT}"
           sh "./pact-broker can-i-deploy --retry-while-unknown=12 --retry-interval=10 -a messaging-app3 -b http://pact_broker -e ${GIT_COMMIT}"
+          sh "./pact-broker can-i-deploy --retry-while-unknown=12 --retry-interval=10 -a userclient -b http://pact_broker -e ${GIT_COMMIT}"
         }
       }
     }
@@ -49,6 +50,7 @@ pipeline {
           sh "./pact-broker create-version-tag -a messaging-app -b http://pact_broker -e ${GIT_COMMIT}"
           sh "./pact-broker create-version-tag -a messaging-app2 -b http://pact_broker -e ${GIT_COMMIT}"
           sh "./pact-broker create-version-tag -a messaging-app3 -b http://pact_broker -e ${GIT_COMMIT}"
+          sh "./pact-broker create-version-tag -a userclient -b http://pact_broker -e ${GIT_COMMIT}"
         }
       }
     }
