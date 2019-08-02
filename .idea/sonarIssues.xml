@@ -58,6 +58,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../user-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../user-service/src/main/java/de/kreuzwerker/cdc/userservice/UserController.java">
           <value>
             <set />
@@ -83,6 +88,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/main/java/io/reflectoring/SendMessageJob.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../user-service/src/main/java/io/reflectoring/UserCreatedMessage.java">
           <value>
             <set />
@@ -99,6 +109,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../user-service/src/test/java/de/kreuzwerker/cdc/userservice/MockedUserServiceContractTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../user-service/src/test/java/io/reflectoring/UserCreatedMessageProviderTest.java">
           <value>
             <set />
           </value>

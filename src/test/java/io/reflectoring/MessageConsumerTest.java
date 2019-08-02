@@ -34,7 +34,7 @@ public class MessageConsumerTest {
         body.stringType("messageUuid");
         body.object("user")
                 .numberType("id", 42L)
-                .stringType("name", "Zaphod Beeblebrox")
+                .stringType("name", "Zaphod Beeblebroxx")
                 .closeObject();
 
         // @formatter:off
