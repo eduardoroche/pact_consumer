@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(classes = MessageConsumerConfiguration.class)
+//@ContextConfiguration(classes = MessageConsumerConfiguration.class)
 public class MessageConsumerTest {
 
     @Rule
