@@ -60,7 +60,7 @@
         <version>${pact.version}</version>
         <configuration>
           <!-- pact_broker is the service name in docker-compose -->
-          <pactBrokerUrl>http://pact_broker</pactBrokerUrl>
+          <pactBrokerUrl>http://${pactbroker.url}</pactBrokerUrl>
           <projectVersion>${pact.consumer.version}</projectVersion>
           <tags>
             <tag>${pact.tag}</tag>

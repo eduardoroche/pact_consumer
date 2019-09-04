@@ -5,6 +5,8 @@ pipeline {
 
   environment {
       BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
+      PACT_BROKER_URL=env.PACT_BROKER_URL
+      PACT_BROKER_PORT=env.PACT_BROKER_PORT
   }
 
   tools {
@@ -20,7 +22,7 @@ pipeline {
     stage('Publish Pacts') {
       steps {
         //-- set prod if want to deploy prod tag
-        sh 'mvn pact:publish -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-8'
+        sh 'mvn pact:publish -Dpactbroker.url=${PACT_BROKER_URL} -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=tag-20'
       }
     }
     stage('Check Pact Verifications') {
