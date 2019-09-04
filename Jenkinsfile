@@ -5,8 +5,6 @@ pipeline {
 
   environment {
       BRANCH_NAME=env.GIT_BRANCH.replace("origin/", "")
-      PACT_BROKER_URL=${env.PACT_BROKER_URL}
-      PACT_BROKER_PORT=${env.PACT_BROKER_PORT}
   }
 
   tools {
