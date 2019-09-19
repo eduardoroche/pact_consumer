@@ -20,7 +20,7 @@ pipeline {
     stage('Publish Pacts') {
       steps {
         //-- set prod if want to deploy prod tag
-        sh 'mvn pact:publish -Dpactbroker.url=${PACT_BROKER_URL} -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=hehehe'
+        sh 'mvn pact:publish -Dpactbroker.url=${PACT_BROKER_URL} -Dpact.consumer.version=${GIT_COMMIT} -Dpact.tag=hehehe1'
       }
     }
     stage('Check Pact Verifications') {
