@@ -46,7 +46,7 @@ public class UserServiceV1ContractTest {
         return builder.given(
                 "User 3 exists")
                 .uponReceiving("A request to /users/3")
-                .path("/users/3")
+                .path("/users/33")
                 .method("GET")
                 .willRespondWith()
                 .status(200)
@@ -60,7 +60,7 @@ public class UserServiceV1ContractTest {
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
-        User user = userServiceClient.getUser("3");
+        User user = userServiceClient.getUser("33");
 
         assertThat(user.getName()).isEqualTo("user name for CDC");
     }
