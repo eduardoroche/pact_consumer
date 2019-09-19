@@ -49,7 +49,7 @@ public class UserServiceV1ContractTest {
                 .path("/users/3")
                 .method("GET")
                 .willRespondWith()
-                .status(301)
+                .status(201)
                 // .status(404)
                 // .toPact();
                 .body(LambdaDsl.newJsonBody((o) ->
