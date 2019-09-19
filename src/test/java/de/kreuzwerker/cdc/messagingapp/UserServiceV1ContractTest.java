@@ -73,7 +73,7 @@ public class UserServiceV1ContractTest {
                 .path("/users/1")
                 .method("GET")
                 .willRespondWith()
-                .status(200)
+                .status(204)
                 .body(LambdaDsl.newJsonBody((o) ->
                         o.stringType("name", "user name for CDC")
                 ).build()).toPact();
