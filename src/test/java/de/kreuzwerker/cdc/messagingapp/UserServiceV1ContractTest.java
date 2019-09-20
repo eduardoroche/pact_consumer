@@ -60,9 +60,9 @@ public class UserServiceV1ContractTest {
     @PactVerification(fragment = "pactUserExists")
     @Test
     public void userExists() {
-        User user = userServiceClient.getUser("33");
-
-        assertThat(user.getName()).isEqualTo("user name for CDC");
+        expandException.expect(HttpClientErrorException.class);
+        expandException.expectMessage("404 Not Found");
+        User user = userServiceClient.getUser("3");
     }
 
     @Pact(consumer = "messaging-app2")
