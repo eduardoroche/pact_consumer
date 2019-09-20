@@ -62,7 +62,7 @@ public class UserServiceV1ContractTest {
     public void userExists() {
         expandException.expect(HttpClientErrorException.class);
         expandException.expectMessage("404 Not Found");
-        User user = userServiceClient.getUser("3");
+        User user = userServiceClient.getUser("33");
     }
 
     @Pact(consumer = "messaging-app2")
